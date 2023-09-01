@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.0.7</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.spring.security</groupId>
+	<artifactId>spring-3.x-security</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>spring-3.x-security</name>
+	<description>spring-security</description>
+	<packaging>pom</packaging>
+	<modules>
+		<module>security-in-memory</module>
+		<module>security-jdbc</module>
+		<module>security-jdbc-custom</module>
+		<module>security-standard-password-encoder</module>
+		<module>bcrypt-password-encoder</module>
+		<module>custom-authentication-provider</module>
+		<module>cross-origin-resource-sharing</module>
+		<module>cross-site-request-forgery-token</module>
+		<module>security-authorities</module>
+		<module>custom-filter</module>
+		<module>jwt</module>
+		<module>security-jdbc-manager-custom</module>
+	</modules>
+</project>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+    <div>
+      <h3>authorized calls and generate csrf token mechanism</h3>
+      <button id="b1">GET 'account' (authorized)</button>
+    </div>
+
+      
+    <div>
+      <h3>permitted calls with csrf token mechanism</h3>
+      <button id="b2">GET about</button>
+      <button id="b3">POST about</button>
+      <button id="b4">POST contact</button>
+    </div>
+    
+    <div>
+      <h3>authorized calls without csrf token mechanism</h3>
+      <button id="b5">POST balance</button>
+      <button id="b6">GET notiecs</button>
+    </div>
+    
+    <div>
+      <h3>permitted calls without csrf token but ignored from token mechanism(public resource for all)</h3>
+      <button id="b7">GET card</button>
+      <button id="b8">PUT card</button>
+    </div>
+    
+    <script src="/js/utils.js"></script>
+    <script src="/js/api-service.js"></script>
+    <script src="/js/home.js"></script>
+  </body>
+</html>
