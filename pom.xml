@@ -20,12 +20,15 @@
 		<module>security-jdbc-custom</module>
 		<module>security-standard-password-encoder</module>
 		<module>bcrypt-password-encoder</module>
-		<module>custom-authentication-provider</module>
+		<module>custom-dao-authentication-provider</module>
+		<module>custom-dao-authentication-provider2</module>
 		<module>cross-origin-resource-sharing</module>
 		<module>cross-site-request-forgery-token</module>
 		<module>security-authorities</module>
 		<module>custom-filter</module>
 		<module>jwt</module>
 		<module>security-jdbc-manager-custom</module>
-	</modules>
+		<module>jwt2</module>
+        <module>jwt3</module>
+    </modules>
 </project>

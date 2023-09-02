@@ -55,7 +55,6 @@ public class JwtGeneratorFilter extends OncePerRequestFilter {
 	protected boolean shouldNotFilter(HttpServletRequest request) {
 		return !request.getServletPath().equals("/login");
 	}
-	
 
 	/**
 	 * to return string of authorities separated with comma
@@ -67,5 +66,4 @@ public class JwtGeneratorFilter extends OncePerRequestFilter {
         }
         return String.join(",", authoritiesSet);
 	}
-
 }

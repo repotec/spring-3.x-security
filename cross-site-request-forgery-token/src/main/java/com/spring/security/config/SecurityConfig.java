@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -39,7 +40,8 @@ public class SecurityConfig {
 			auth.requestMatchers("/contact/**").permitAll();
 			auth.requestMatchers("/card/**").permitAll();
 			auth.requestMatchers("/login").permitAll();
-		}).httpBasic(Customizer.withDefaults());
+		}).sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+		  .httpBasic(Customizer.withDefaults());
 		
 		return httpSecurity.build();
 	}
@@ -60,9 +62,5 @@ public class SecurityConfig {
         
         return source;
     }
-	
-	@Bean("passwordEncoder")
-	public PasswordEncoder getPasswordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
 }
+

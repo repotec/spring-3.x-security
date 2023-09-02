@@ -10,9 +10,7 @@
 	<artifactId>jwt</artifactId>
 	<name>jwt</name>
 	<description>JSON Web Tokens demo</description>
-	<properties>
-		<java.version>11</java.version>
-	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
